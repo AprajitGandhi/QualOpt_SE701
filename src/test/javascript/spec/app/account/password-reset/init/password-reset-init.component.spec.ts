@@ -77,7 +77,7 @@ describe('Component Tests', () => {
             inject([PasswordResetInitService], (service: PasswordResetInitService) => {
                 spyOn(service, 'save').and.returnValue(Observable.throw({
                     status: 400,
-                    _body: 'email address not registered'
+                    data: 'email address not registered'
                 }));
                 comp.resetAccount.email = 'user@domain.com';
 
